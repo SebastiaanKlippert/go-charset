@@ -17,9 +17,9 @@ package iconv
 //size_t iconv_error = (size_t)-1;
 import "C"
 import (
-	"github.com/SebastiaanKlippert/go-charset"
 	"errors"
 	"fmt"
+	"github.com/SebastiaanKlippert/go-charset"
 	"runtime"
 	"strings"
 	"syscall"
