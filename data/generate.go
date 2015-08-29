@@ -6,7 +6,7 @@
 // for code.google.com/p/go-charset/data from the data files
 // found in code.google.com/p/go-charset/datafiles.
 // It should be run in the go-charset root directory.
-// The resulting Go files will need gofmt'ing.
+// The resulting Go files will need goimports to import this package.
 package main
 
 import (
@@ -18,7 +18,7 @@ import (
 )
 
 type info struct {
-	Path    string
+	Path string
 }
 
 var tfuncs = template.FuncMap{
@@ -36,7 +36,6 @@ var tmpl = template.Must(template.New("").Funcs(tfuncs).Parse(`
 
 	package data
 	import (
-		"code.google.com/p/go-charset/charset"
 		"io"
 		"io/ioutil"
 		"strings"
@@ -74,7 +73,7 @@ func main() {
 	}
 	for _, name := range names {
 		writeFile("data_"+name+".go", tmpl, info{
-			Path:    filepath.Join(dataDir, name),
+			Path: filepath.Join(dataDir, name),
 		})
 	}
 }
