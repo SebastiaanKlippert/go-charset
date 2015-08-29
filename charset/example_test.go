@@ -2,7 +2,7 @@ package charset_test
 
 import (
 	"bytes"
-	"code.google.com/p/go-charset/charset"
+	"github.com/SebastiaanKlippert/go-charset"
 	_ "code.google.com/p/go-charset/data"
 	"fmt"
 	"io/ioutil"
